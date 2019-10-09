@@ -1,0 +1,15 @@
+.c-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: $spacing-unit*8;
+}
+
+@each $key,$val in $colors {
+	.u-text--#{$key} {
+		color: $val !important;
+	}
+	.u-bg--#{$key} {
+		background: $val !important;
+	}
+}

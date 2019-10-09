@@ -1,0 +1,27 @@
+extends layout/_layout.pug
+include components/_actions.pug
+
+block variables
+	- var page = 'Scope';
+
+block content
+	a.c-button(href="./") &larr; Home
+	img.c-header-img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/scope.svg")
+	h1 Scope
+	.c-module
+		h4 Goal
+		p Work with your team to figure what's the smallest coherent solution of your Concept that can be shipped and tested if it has solved the problem.
+	h4 Activities you 
+		span.u-text--red should 
+		| do
+	ol
+		li Join a scoping session with your team and help crystalize what's the smallest solution that heads in the direction of your Concept
+	h4 Activities you 
+		span.u-text--yellow could 
+		| do
+	ol
+		li Expand on the Concept to help understand how to scope it
+	.c-module.c-module--green
+		h4 Output
+		p Scope set for the first solution that you'll design, ship and learn from.
+	+actions('2. Concept', 'concept', 'yellow', '4. Detail', 'detail', 'blue')

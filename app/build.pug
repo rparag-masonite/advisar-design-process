@@ -1,0 +1,39 @@
+extends layout/_layout.pug
+include components/_actions.pug
+
+block variables
+	- var page = 'Build';
+
+block content
+	a.c-button(href="./") &larr; Home
+	img.c-header-img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/build.svg")
+	h1 Build
+	.c-module
+		h4 Goal
+		p Work with Engineers to finalize design, resolve edge cases, polish, QA and ship a solution.
+	h4 Activities you 
+		span.u-text--red should 
+		| do
+	ol
+		li Design the unhappy path: Empty, error and loading states, edge cases.
+		li Polish the visuals, make it look beautiful and feel enjoyable.
+		li Make sure the copy is concise & easy to understand.
+		li QA the built UI early and often. Ensure it's high quality, align with your design.
+		li Ensure it is fast and low latency. Ensure it’s perceived performance is high.
+		li Take ownership of what we will ship and fight for quality. Push for the best possible experience. Look to cut scope, but not quality. Be okay with this resulting in some healthy tension.
+	h4 Activities you 
+		span.u-text--yellow could 
+		| do
+	ol
+		li Design meaningful micro-interactions and transitions
+		li Sit next to engineers and work around tech challenges together
+		li Tweak your designs in the browser in response to technical challenges
+		li Write HTML/CSS/JS yourself
+		li Create Jira/Github issues and ensure they are closed out before shipping
+		li Work with the engineering team to ensure our patterns and components are being used correctly or that you're feeding changes back into the design system
+		li Work with marketing and stakeholders to finalize content
+		li Create a detailed QA and user testing plan with the team
+	.c-module.c-module--green
+		h4 Output
+		p Your design implemented in high quality and shipped.
+	+actions('4. Detail', 'detail', 'blue', '', '', '')
