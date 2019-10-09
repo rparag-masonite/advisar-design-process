@@ -1,0 +1,10 @@
+mixin actions(beforeTitle, beforeLink, beforeColor, afterTitle, afterLink, afterColor)
+	.c-actions
+		if beforeTitle != ''
+			a.c-button(href="/" + beforeLink + ".html" class="c-button--" + beforeColor)= "← " + beforeTitle
+		else
+			span
+		if afterTitle != ''
+			a.c-button(href="/" + afterLink + ".html" class="c-button--" + afterColor)= afterTitle + " →"
+		else
+			span

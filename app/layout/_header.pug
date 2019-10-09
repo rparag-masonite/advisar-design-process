@@ -1,0 +1,19 @@
+header.l-header
+	.l-header__body
+		.l-header__item
+			a.c-logo(href="./")
+				.c-logo__icon
+				.c-logo__wordmark Design Process
+		.l-header__item
+			ul.c-nav
+				- var navItems = [{name: 'Discover', link: '/discover.html', color: 'red'},{name: 'Concept', link: '/concept.html', color: 'yellow'},{name: 'Scope', link: '/scope.html', color: 'green'},{name: 'Detail', link: '/detail.html', color: 'blue'},{name: 'Build', link: '/build.html', color: 'purple'},];
+				each navItem, index in navItems
+					li.c-nav__item
+						if page == navItem.name
+							a.c-nav__link.c-nav__link--active(href=navItem.link class="c-nav__link--" + navItem.color)= (index + 1) + ". " + navItem.name
+						else
+							a.c-nav__link(href=navItem.link class="c-nav__link--" + navItem.color)= (index + 1) + ". " + navItem.name
+			button.c-theme
+				i(data-feather="sun")
+			button.c-mobile-nav
+				i(data-feather="menu") 
