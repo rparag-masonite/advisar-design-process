@@ -1,0 +1,54 @@
+.c-nav {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+	&__item {
+		margin: 0;
+		background: transparent;
+		padding: 0;
+	}
+	&__link {
+		padding: $spacing-unit*2;
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		user-select: none;
+		position: relative;
+		transition: all 120ms ease-out 0s;
+		&--active {
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: currentColor;
+				opacity: var(--light-val);
+			}
+		}
+		@each $state in $states {
+			&--#{$state} {
+				color: var(--#{$state});
+				&:hover, &:focus {
+					background: var(--#{$state}-light);
+				}
+			}
+		}
+		&:hover, &:focus {
+			outline: 0;
+			opacity: .75;
+		}
+		&:focus, &:active {
+			box-shadow: 0px 0px 0px $spacing-unit/4 currentColor;
+		}
+		&:active {
+			box-shadow: inset 0px 0px $spacing-unit var(--neutral-3);
+		}
+	}
+}

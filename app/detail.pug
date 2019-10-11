@@ -1,0 +1,41 @@
+extends layout/_layout.pug
+include components/_actions.pug
+
+block variables
+	- var page = 'Detail';
+
+block content
+	a.c-button(href="./") &larr; Home
+	img.c-header-img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/detail.svg")
+	h1 Detail
+	.c-module
+		h4 Goal
+		p Figure out the necessary flow and interaction design details to enable engineers to start building the scoped solution.
+	h4 Activities you 
+		span.u-text--red should 
+		| do
+	ol
+		li Design the flow in high fidelity.
+		li Use our design system. Try reusing, evolving or merging existing patterns before introducing new patterns. When in doubt, talk to the team.
+		li Follow the Fundamentals of Good UI Design.
+		li Use real content, avoid placeholders as much as possible.
+		li Think about the system holistically. Consider how it'll impact the rest of the product and if you need to make any changes elsewhere.
+		li Discuss your proposal with other teams that get impacted by it.
+		li Don't just design the happy path, consider all states and edge cases.
+		li Consider how users will experience your design for the first time.
+		li Consider how it might impact tertiary back-end services and how the feature might interact with them.
+	h4 Activities you 
+		span.u-text--yellow could 
+		| do
+	ol
+		li Create interactive prototypes
+		li Prototypes to test the flow your users will go through (using Figma, Invision)
+		li Prototypes to test detailed micro-interactions and transitions (using front-end code, Framer, Principle)
+		li Work with a marketing and stakeholders to write the content
+		li Contribute or give feedback on our design system
+		li Do usability testing on your designs and prototypes with real customers and iterate based on feedback
+		li Share your designs with the team for feedback via Slack/Notion/Jira
+	.c-module.c-module--green
+		h4 Output
+		p High fidelity designs/prototypes shared with engineers to start building.
+	+actions('3. Scope', 'scope', 'blue', '5. Build', 'build', 'purple')

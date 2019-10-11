@@ -1,0 +1,36 @@
+.c-logo {
+	padding: $spacing-unit*2;
+	display: inline-block;
+	font-weight: 700;
+	text-decoration: none;
+	color: inherit;
+	transition: all 200ms ease-out 0s;
+	display: inline-flex;
+	align-items: center;
+	&__icon {
+		$size: $spacing-unit*3;
+		width: $size;
+		height: $size;
+		margin-right: $spacing-unit;
+		border-radius: $border-radius;
+		background: var(--color);
+		animation: logo 10s linear infinite;
+		transition: all 200ms ease-out 0s;
+		position: relative;
+		&:after {
+			content: '';
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border-radius: $border-radius;
+			position: absolute;
+			background: linear-gradient(135deg, rgba(white, 0.5), rgba(white, 0));
+		}
+	}
+	&:hover, &:focus {
+		.c-logo__icon {
+			transform: rotate(15deg) scale(1.2);
+		}
+	}
+}

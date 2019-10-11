@@ -1,0 +1,44 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-size: $base-font-size;
+	background: var(--bg);
+	color: var(--color);
+	font-family: granville, serif;
+	@media screen and (max-width: 1100px) {
+		font-size: $mobile-font-size;
+	}
+}
+
+@keyframes logo {
+	0% {
+		background: var(--red)
+	}
+	20% {
+		background: var(--yellow)
+	}
+	40% {
+		background: var(--green)
+	}
+	60% {
+		background: var(--blue)
+	}
+	80% {
+		background: var(--purple)
+	}
+	100% {
+		background: var(--red)
+	}
+}

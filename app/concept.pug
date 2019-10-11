@@ -1,0 +1,45 @@
+extends layout/_layout.pug
+include components/_actions.pug
+
+block variables
+	- var page = 'Concept';
+
+block content
+	a.c-button(href="./") &larr; Home
+	img.c-header-img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/concept.svg")
+	h1 Concept
+	.c-module
+		h4 Goal
+		p Explore a broad range of ways to solve the problem in lowest possible fidelity that can give you sufficient confidence to decide on which direction to go. Not everything needs to be figured out, but you should cross the threshold where you feel confident that this is the right solution and you're not missing out on opportunities.
+	h4 Activities you 
+		span.u-text--red should 
+		| do
+	ol
+		li Create concepts for solutions that solve the problem in different ways in lowest fidelity that can give you sufficient confidence
+		li Illustrate the proposed user journey and how the system works
+		li Create simple wireframes that explain the core idea
+		li Define implications and open questions
+		li Evaluate concepts with pros and cons
+		li Have a recommendation and rationale why
+		li Work with engineers to understand the technical constraints
+		li Work with engineers to understand technical implications of your concepts
+		li Gather feedback on your concepts from your team lead and Manager
+		li Reach agreement with your team about which of the proposed approaches to move forward with
+	h4 Activities you 
+		span.u-text--yellow could 
+		| do
+	ol
+		li Workshop with your team
+		li Work with engineers to spike solutions
+		li Define principles for your project to help evaluate your solution
+		li If low fidelity doesn't give you sufficient confidence and interaction design is a key component in the concept decision, you might need to design high fidelity designs or prototypes
+		li Gather feedback on your concepts in a product forum
+		li Gather feedback on your concepts on JIRA/Slack/Notion from the team and stakeholders
+		li Test your concepts with customers to inform your decision
+		li Work with marketing and stakeholders to get clear on system model, core concepts, copy, and naming
+		li Work with  marketing to ensure the solution aligns with go-to-market (GTM) needs
+		li You might need multiple rounds of reviewing concepts before you can make a decision
+	.c-module.c-module--green
+		h4 Output
+		p Decision on a concept you and your team believes is going to be the right solution for the problem. The Concept should be written either as a Notion or Confluence doc that can be shared and referenced later.
+	+actions('1. Discover', 'discover', 'red', '3. Scope', 'scope', 'green')
