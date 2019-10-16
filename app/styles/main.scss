@@ -1,6 +1,18 @@
-@import 'fonts';
+@import "abstracts/variables";
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: cornflowerblue;
-}
+@import "base/base";
+@import "base/typography";
+@import "base/layout";
+
+@import "components/actions";
+@import "components/button";
+@import "components/footer";
+@import "components/header";
+@import "components/intro";
+@import "components/logo";
+@import "components/mobile-nav";
+@import "components/module";
+@import "components/nav";
+@import "components/theme";
+
+@import "utilities/colors";

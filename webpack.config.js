@@ -74,9 +74,9 @@ const commonConfig = merge([
       modules: false
     },
     plugins: [
-      new HtmlPlugin({
+      /*new HtmlPlugin({
         template: './index.pug'
-      }),
+      }),*/
       new FriendlyErrorsPlugin(),
       new StylelintPlugin(lintStylesOptions)
     ],
@@ -93,6 +93,29 @@ const commonConfig = merge([
     }
   })
 ])
+
+const pages = [
+  parts.page({
+    title: 'Home',
+    entry: {
+      home: paths.app
+    },
+    template: path.join(paths.app, 'index.pug'),
+
+    // An array of chunks to include in the page
+    chunks: ['home', 'runtime', 'vendors']
+  }),
+  parts.page({
+    title: 'About',
+    path: 'about',
+    entry: {
+      about: path.join(paths.app, 'discover')
+    },
+    template: path.join(paths.app, 'discover/discover.pug'),
+
+    chunks: ['discover', 'runtime', 'vendors']
+  })
+]
 
 const productionConfig = merge([
   {
@@ -209,7 +232,8 @@ module.exports = env => {
 
   return merge(
     commonConfig,
-    env === 'production' ? productionConfig : developmentConfig
+    env === 'production' ? productionConfig : developmentConfig,
+    ...pages
   )
 }
 

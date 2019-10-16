@@ -1,8 +1,8 @@
 import '../styles/main.scss'
 
-/*if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   require('../index.pug')
-}*/
+}
 
 document.body.classList = sessionStorage.getItem('theme');
 

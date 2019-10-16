@@ -1,0 +1,140 @@
+:root {
+	--black: hsla(0,0%,6%,1);
+	--white: #ffffff;
+	
+	--lightMode: 100%;
+	--darkMode: 6%;
+	--light-val: 0.12;
+	
+	--mode: var(--lightMode);
+	
+	--neutral-9: hsla(0,0%,var(--mode),0.9);
+	--neutral-8: hsla(0,0%,var(--mode),0.8);
+	--neutral-7: hsla(0,0%,var(--mode),0.7);
+	--neutral-6: hsla(0,0%,var(--mode),0.6);
+	--neutral-5: hsla(0,0%,var(--mode),0.5);
+	--neutral-4: hsla(0,0%,var(--mode),0.4);
+	--neutral-3: hsla(0,0%,var(--mode),0.3);
+	--neutral-2: hsla(0,0%,var(--mode),0.2);
+	--neutral-1: hsla(0,0%,var(--mode),0.1);
+	--neutral-50: hsla(0,0%,var(--mode),0.05);
+	
+	--red: hsla(0, 88%, 68%, 1);
+	--red-light: hsla(0, 88%, 68%, var(--light-val));
+	
+	--green: hsla(145, 46%, 51%, 1);
+	--green-light: hsla(145, 46%, 51%, var(--light-val));
+	
+	--blue: hsla(207, 73%, 57%, 1);
+	--blue-light: hsla(207, 73%, 57%, var(--light-val));
+	
+	--purple: hsla(260, 73%, 70%, 1);
+	--purple-light: hsla(260, 73%, 70%, var(--light-val));
+	
+	--yellow: hsla(47, 81%, 61%, 1);
+	--yellow-light: hsla(47, 81%, 61%, var(--light-val));
+	
+	--bg: var(--black);
+	--color: var(--white);
+	--subtle: var(--neutral-50);
+	&[dark] {
+		--mode: var(--darkMode);
+		--bg: var(--white);
+		--color: var(--black);
+	}
+}
+
+$colors: (
+	neutral-9: var(--neutral-9),
+	neutral-8: var(--neutral-8),
+	neutral-7: var(--neutral-7),
+	neutral-6: var(--neutral-6),
+	neutral-5: var(--neutral-5),
+	neutral-4: var(--neutral-4),
+	neutral-3: var(--neutral-3),
+	neutral-2: var(--neutral-2),
+	neutral-1: var(--neutral-1),
+	neutral-50: var(--neutral-50),
+	red: var(--red),
+	green: var(--green),
+	blue: var(--blue),
+	purple: var(--purple),
+	yellow: var(--yellow),
+);
+
+$spacing-unit: 0.8rem;
+$border-radius: $spacing-unit/2;
+
+$type-margin: $spacing-unit*3;
+$base-font-size: 2rem;
+$mobile-font-size: 1.8rem;
+
+$typography: (
+	h1: (
+		font-size: 6.4rem,
+		line-height:110%,
+		font-weight: 700
+	),
+	h2: (
+		font-size: 4.8rem,
+		line-height:128%,
+		font-weight: 700
+	),
+	h3: (
+		font-size: 4rem,
+		line-height:128%,
+		font-weight: 700
+	),
+	h4: (
+		font-size: 3.2rem,
+		line-height:128%,
+		font-weight: 400
+	),
+	h5: (
+		font-size: 2.4rem,
+		line-height:128%,
+		font-weight: 400
+	),
+	h6: (
+		font-size: $base-font-size,
+		line-height:135%,
+		font-weight: 400
+	),
+	p: ( 
+		font-size: $base-font-size,
+		line-height:160%,
+		font-weight: 400,
+		margin-top: 0,
+		margin-bottom: $type-margin
+	),
+	small: (
+		font-size: 1.6rem,
+		font-weight: 400,
+	)
+);
+
+$typography-mobile: (
+	h1: (
+		font-size: 4.0rem,
+	),
+	h2: (
+		font-size: 3.6rem,
+	),
+	h3: (
+		font-size: 3.0rem,
+	),
+	h4: (
+		font-size: 2.4rem,
+	),
+	h5: (
+		font-size: $mobile-font-size,
+	),
+	h6: ( 
+		font-size: 1.6rem,
+	),
+	p: (
+		font-size: $mobile-font-size,
+	)
+);
+
+$states: (red, yellow, purple, blue, green);

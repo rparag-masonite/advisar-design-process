@@ -1,6 +1,6 @@
-# Webpack Pug SCSS Boilerplate
+# Advisar Design Process
 
-A webpack 4 based boilerplate for building web apps.
+A quick outline for **practical** design process
 
 ## Features:
 * [Pug](https://pugjs.org) as a template engine
