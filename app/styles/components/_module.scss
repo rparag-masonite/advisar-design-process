@@ -1,0 +1,11 @@
+.c-module {
+	background: var(--neutral-50);
+	padding: $spacing-unit $spacing-unit*2;
+	margin-bottom: $spacing-unit*4;
+	@each $state in $states {
+		&--#{$state} {
+			color: var(--#{$state});
+			background: var(--#{$state}-light);
+		}
+	}
+}

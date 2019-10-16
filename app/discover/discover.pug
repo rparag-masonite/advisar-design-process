@@ -1,0 +1,37 @@
+extends ../layout/_layout.pug
+include ../components/_actions.pug
+
+block variables
+	- var page = 'Discover';
+
+block content
+	a.c-button(href="./") &larr; Home
+	img.c-header-img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/discover.svg")
+	h1 Discover
+	.c-module
+		h4 Goal
+		p Develop a sharp understanding and articulation of the problem we're trying to solve. Ensure we've asked enough questions and challenged assumptions. Consider how it impacts our customers, their end-users and our own business.
+	h4 Activities you 
+		span.u-text--red should 
+		| do
+	ol
+		li Discuss the feature discovery or problem statement with your product manager
+		li Discuss how it impacts our customers, their end-users and our business
+		li Discuss what success looks like by defining success metrics
+		li Write down your open questions and figure out how you'll answer them
+		li Look at past research
+		li Create a plan of attack for how you'll approach the design work
+	h4 Activities you 
+		span.u-text--yellow could 
+		| do
+	ol
+		li Challenge the discovery outcomes - is it the right problem, is it phrased the right way?
+		li Conduct new research (qualitative and/or quantitative)
+		li Research competitors
+		li Review existing customer conversations or message them
+		li Talk to other teams and business stakeholders (sales, support, marketing, etc.) to better understand the problem and how it impacts them
+		li Illustrate the current user journey, how the system works and problems with it
+	.c-module.c-module--green
+		h4 Output
+		p Refined discovery based on your feedback and findings. Research findings should be captured in a Notion or Confluence doc.
+	+actions('', '', '', '2. Concept', 'concept', 'yellow')

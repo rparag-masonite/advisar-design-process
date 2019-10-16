@@ -1,0 +1,54 @@
+.c-mobile-nav {
+	display: none;
+	background: transparent;
+	padding: $spacing-unit*2;
+	background: var(--color);
+	color: var(--bg);
+	@media screen and (max-width: 768px) {
+		display: inline-block;
+	}
+	&:focus, &:active {
+		outline: 0;
+	}
+}
+
+.c-overlay {
+	position: fixed;
+	background: var(--bg);
+	top: $spacing-unit*7.4;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.c-mobile-list {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	&__item {
+		margin: 0;
+		height: 20%;
+		text-align: center;
+		padding: 0;
+		@each $state in $states {
+			&--#{$state} {
+				color: var(--#{$state});
+				background: var(--#{$state}-light);
+			}
+		}
+	}
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		font-size: 3rem;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

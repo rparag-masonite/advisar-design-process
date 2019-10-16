@@ -1,0 +1,11 @@
+.l-footer {
+	padding: $spacing-unit*4 0;
+	background: var(--subtle);
+	margin-top: $spacing-unit*6;
+	&__body {
+		width: 100%;
+		max-width: 800px;
+		padding: $spacing-unit*2;
+		margin: auto;
+	}
+}

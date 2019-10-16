@@ -1,0 +1,8 @@
+.c-theme {
+	padding: $spacing-unit*2.2;
+	margin: 0;
+	//background: transparent;
+	&:focus, &:active {
+		outline: 0;
+	}
+}
