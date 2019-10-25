@@ -699,6 +699,7 @@ button {
   background: var(--subtle);
   color: inherit;
   font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .c-button {
