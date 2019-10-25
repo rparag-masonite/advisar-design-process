@@ -699,6 +699,9 @@ button {
   background: var(--subtle);
   color: inherit;
   font-family: inherit;
+}
+
+button, a {
   -webkit-tap-highlight-color: transparent;
 }
 
