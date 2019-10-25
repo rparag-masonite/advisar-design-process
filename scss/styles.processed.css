@@ -294,6 +294,12 @@ a.c-intro__item:hover .c-intro__item-img, a.c-intro__item:focus .c-intro__item-i
   margin-top: 3.2rem;
 }
 
+.c-img-logo {
+  display: inline-block;
+  width: 100%;
+  max-width: 12rem;
+}
+
 .c-mobile-nav {
   display: none;
   background: transparent;
@@ -421,7 +427,7 @@ a.c-intro__item:hover .c-intro__item-img, a.c-intro__item:focus .c-intro__item-i
 }
 
 .c-logo {
-  padding: 1.6rem;
+  padding: 0.8rem 1.6rem;
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
