@@ -63,7 +63,7 @@
     "style-loader": "^1.1.2",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.5.4",
+    "stylelint-scss": "^3.13.0",
     "stylelint-webpack-plugin": "^1.1.2",
     "terser-webpack-plugin": "2.3.2",
     "url-loader": "^1.1.2",
